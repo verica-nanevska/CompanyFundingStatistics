@@ -1,6 +1,5 @@
 package coding.test.company.pojos;
 
-import coding.test.company.CompanyApplication;
 import com.google.gson.annotations.SerializedName;
 import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
@@ -101,6 +100,6 @@ public class Company {
                 getEmailAddress(), getPhoneNumber(), getDescription(), getUpdatedAt(),
                 overviewNoLF,
                 getTotalMoneyRaised());
-        return String.join(CompanyApplication.CSV_SEPARATOR, company);
+        return String.join("\t", company);
     }
 }
